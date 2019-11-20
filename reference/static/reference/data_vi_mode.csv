@@ -1,0 +1,68 @@
+category,command,description
+Entering Input Mode,i,Insert before cursor
+Entering Input Mode,a,Insert after cursor
+Entering Input Mode,I,Insert at the beginning of line
+Entering Input Mode,A,Insert at the end of line
+Entering Input Mode,c<movement command>,Change text of a movement command
+Entering Input Mode,C or c$,Change text to the end of line
+Entering Input Mode,cc or S or 0c$,Change current line
+Entering Input Mode,s or c[SPACE],Delete a single charecter under the cursor and enter input mode
+Entering Input Mode,r,Replace a single charecter under the cursor(without leaving the command mode)
+Entering Input Mode,R,Replace characters under the cursor
+Entering Input Mode,v,Edit(and execute) the current command in a text editor(an editor in $VISUAL and $EDITOR variables or vi)
+
+Moving,l or SPACE,Move one character right
+Moving,h,Move one character left
+Moving,w,Move one word/token right
+Moving,b,Move one word/token left
+Moving,W,Move one non-blank word right
+Moving,B,Move one non-blank word left
+Moving,e,Move to the end of the current word
+Moving,E,Move to the end of the current non-blank word
+Moving,0,Move to the beginning of line
+Moving,ˆ,Move to the first non-blank character of line
+Moving,$,Move to the end of line
+Moving,%,"Move to the corresponding opening/closing bracket (()’s, []’s and {}’s)"
+
+Searching,fc,Move right to the next occurance of c
+Searching,Fc,Move left to the previous occurance of c
+Searching,tc,"Move right to the next occurance of c, then one char backward"
+Searching,Tc,"Move left to the previous occurance of c, then one char forward"
+Searching,;,Redo the last character finding command
+Searching,",",Redo the last character finding command in opposite direction
+Searching,|,"Move to the n-th column (you may specify the argument n by typing it on number keys, for example, 20|)"
+
+Deleting,x,Delete a single character under the cursor
+Deleting,X,Delete a character before the cursor
+Deleting,d<movement command>,Delete text of a movement command
+Deleting,D or d$,Delete to the end of the line
+Deleting,dd or 0d$,Delete current line
+Deleting,Ctrl-w,Delete the previous word
+Deleting,Ctrl-u,Delete from the cursor to the beginning of line
+
+Undo/Redo,u,Undo previous text modification
+Undo/Redo,U,Undo all previous text modifications on the line
+Undo/Redo,.,Redo the last text modification
+
+Yanking and Pasting,y<movement command>,Yank a movement into buffer)
+Yanking and Pasting,yy,Yank the whole line
+Yanking and Pasting,p,Insert the yanked text at the cursor)
+Yanking and Pasting,P,Insert the yanked text before the cursor
+
+History,k,Move backward one command in history
+History,j,Move forward one command in history
+History,G,"Move to the history line n (you may specify the argument n by typing it on number keys, for example, 15G)"
+History,/string or Ctrl-r,Search history backward for a command matching string
+History,?string or Ctrl-s,Search history forward for a command matching string (remember that on most machines Ctrl-s stops the output to the terminal (Ctrl-q starts output) and you
+History,n,Repeat search in the same direction as previous
+History,N,Repeat search in the opposite direction as previous
+
+Completing,TAB or Ctrl-i or =,List possible completions
+Completing,*,Insert all possible completions
+
+Miscellaneous,∼,"Invert the case of the character under cursor, and move a character right"
+Miscellaneous,#,Prepend # (comment character) to the line and send it to the history list
+Miscellaneous,_,Inserts the n-th word of the previous command in the current line
+Miscellaneous,"0, 1, 2, ...",Sets the numeric argument
+Miscellaneous,Ctrl-v,Insert a character literally (quoted insert)
+Miscellaneous,Ctrl-t,Transpose (exchange) two characters

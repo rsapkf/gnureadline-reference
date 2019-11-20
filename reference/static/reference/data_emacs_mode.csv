@@ -1,0 +1,56 @@
+category,command,description
+Moving,Ctrl-a,Move to the start of the current line
+Moving,Ctrl-e,Move to the end of the line
+Moving,Ctrl-f,Move forward a character
+Moving,Ctrl-b,Move back a character
+Moving,Alt-f,Move forward to the end of the next word Words are alphanumeric
+Moving,Alt-b,Move back to the start of the current/previous word Words are alphanumeric
+Moving,Ctrl-l,Clear the screen
+
+History,Ctrl-p,Fetch the previous command from the history list
+History,Ctrl-n,Fetch the next command from the history list
+History,Alt-<,Move to the first line in the history
+History,Alt->,Move to the last line in the history
+History,Ctrl-r,Search backward through history
+History,Ctrl-s,Search forward through history
+History,Alt-p,Search backward through history for a given string
+History,Alt-n,Search forward through history for a given string
+History,Ctrl-Alt-y,"Insert the first argument to the previous command With an argument n, insert the nth word from the previous command"
+History,Alt-. or Alt-_,"Insert the last argument to the previous command With an argument n, insert the nth word from the previous command"
+
+Changing Text,Ctrl-d,Delete the character under the cursor
+Changing Text,Delete,Delete the character before the cursor
+Changing Text,Ctrl-v/Ctrl-q,Add the next character you type verbatim
+Changing Text,Ctrl-t,Transpose characters
+Changing Text,Alt-t,Transpose words
+Changing Text,Alt-u,Uppercase the current word
+Changing Text,Alt-l,Lowercase the current word
+Changing Text,Alt-c,Capitalize the current word
+
+Killing and Yanking,Ctrl-k,Kill (cut) forwards to the end of the line
+Killing and Yanking,Ctrl-u or Ctrl-x/Delete,Kill (cut) backwards to the start of the line
+Killing and Yanking,Alt-d,Kill (cut) forwards to the end of the current word
+Killing and Yanking,Alt-Delete or Ctrl-w,Kill (cut) backwards to the start of the current word
+Killing and Yanking,Alt-\,Delete whitespace around the cursor
+Killing and Yanking,Ctrl-y,Yank (paste) the top of the kill ring
+Killing and Yanking,Alt-y,"Rotate the kill ring, and yank (paste) the new top. Only works after a yank."
+
+Completing,Tab,Autocomplete
+Completing,Alt-?,List possible completions
+Completing,Alt-*,Insert possible completions
+
+Macros,Ctrl-x (,Begin saving the characters typed as a macro
+Macros,Ctrl-x ),Stop saving the characters typed as a macro
+Macros,Ctrl-x e,Execute the most recent macro
+
+Miscellaneous,Ctrl-x or Ctrl-r,Read in the contents of the inputrc file
+Miscellaneous,Ctrl-g,Abort current editing command
+Miscellaneous,Ctrl-_ or Ctrl-x or Ctrl-u,"Incremental undo, separately remembered for each line"
+Miscellaneous,Alt-r,Undo all changes made to this line. This is like executing the undo command enough times to return the line to its initial state
+Miscellaneous,Alt-Space or Ctrl-@,Set the mark (save this location)
+Miscellaneous,Ctrl-x or Ctrl-x,Set the mark and jump to the previous mark
+Miscellaneous,Ctrl-],Search forwards for a single character in the current line and jump to that location
+Miscellaneous,Ctrl-Alt-],Search backwards for a single character in the current line and jump to that location
+Miscellaneous,Alt-#,Comment the current line and start a new one
+Miscellaneous,Ctrl-e,Enter Emacs editing mode
+Miscellaneous,Ctrl-Alt-j,Enter Vi editing mode
