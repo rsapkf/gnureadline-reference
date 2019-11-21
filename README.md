@@ -1,6 +1,6 @@
 ## GNU Readline Reference
 
-This is the source for the overengineered Django app running on [gnureadline-reference.herokuapp.com](https://gnureadline-reference.herokuapp.com/) that aims to be a complete guide to GNU Readline Library shortcuts for both VI and Emacs Editing Modes.
+This is the source for the (quite overengineered for what it does) Django app running on [gnureadline-reference.herokuapp.com](https://gnureadline-reference.herokuapp.com/) that aims to be a complete guide to GNU Readline Library shortcuts for both VI and Emacs Editing Modes.
 
 ## Contributing
 
