@@ -3,7 +3,7 @@
 
 /* Tech Stack */
     Languages: HTML5, CSS3, Python3.7
-    Frameworks: Boostrap, Bootswatch, Django
+    Frameworks: Bootstrap, Bootswatch, Django
     Tools: Neovim, VSCode, rxvt-unicode, Firefox, Heroku, GitHub
 
 /* Inspiration */

@@ -1,13 +1,12 @@
-from django.shortcuts import render
+import os
 import csv
+from django.shortcuts import render
 from django.template.defaulttags import register
 
 # Django custom Filter
 @register.filter
 def get_item(dictionary, key):
     return dictionary.get(key)
-
-import os
 
 current_directory = os.path.dirname(os.path.abspath(__file__))
 vi_data_file = current_directory + '/static/reference/data_vi_mode.csv'
@@ -45,4 +44,3 @@ def index(request):
     }
 
     return render(request, 'index.html', context=context)
-    # return render(request, 'index.html')
