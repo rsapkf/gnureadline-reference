@@ -1,0 +1,526 @@
+{
+  "modes": [
+    {
+      "mode": "Vi",
+      "categories": [
+        {
+          "category": "Entering Input Mode",
+          "commands": [
+            {
+              "command": "i",
+              "description": "Insert before cursor"
+            },
+            {
+              "command": "a",
+              "description": "Insert after cursor"
+            },
+            {
+              "command": "I",
+              "description": "Insert at the beginning of line"
+            },
+            {
+              "command": "A",
+              "description": "Insert at the end of line"
+            },
+            {
+              "command": "c<movement command>",
+              "description": "Change text of a movement command"
+            },
+            {
+              "command": "C or c$",
+              "description": "Change text to the end of line"
+            },
+            {
+              "command": "cc or S or 0c$",
+              "description": "Change current line"
+            },
+            {
+              "command": "s or c[SPACE]",
+              "description": "Delete a single charecter under the cursor and enter input mode"
+            },
+            {
+              "command": "r",
+              "description": "Replace a single charecter under the cursor(without leaving the command mode)"
+            },
+            {
+              "command": "R",
+              "description": "Replace characters under the cursor"
+            },
+            {
+              "command": "v",
+              "description": "Edit(and execute) the current command in a text editor(an editor in $VISUAL and $EDITOR variables or vi)"
+            }
+          ]
+        },
+        {
+          "category": "Moving",
+          "commands": [
+            {
+              "command": "l or SPACE",
+              "description": "Move one character right"
+            },
+            {
+              "command": "h",
+              "description": "Move one character left"
+            },
+            {
+              "command": "w",
+              "description": "Move one word/token right"
+            },
+            {
+              "command": "b",
+              "description": "Move one word/token left"
+            },
+            {
+              "command": "W",
+              "description": "Move one non-blank word right"
+            },
+            {
+              "command": "B",
+              "description": "Move one non-blank word left"
+            },
+            {
+              "command": "e",
+              "description": "Move to the end of the current word"
+            },
+            {
+              "command": "E",
+              "description": "Move to the end of the current non-blank word"
+            },
+            {
+              "command": "0",
+              "description": "Move to the beginning of line"
+            },
+            {
+              "command": "ˆ",
+              "description": "Move to the first non-blank character of line"
+            },
+            {
+              "command": "$",
+              "description": "Move to the end of line"
+            },
+            {
+              "command": "%",
+              "description": "Move to the corresponding opening/closing bracket (()’s, []’s and {}’s)"
+            }
+          ]
+        },
+        {
+          "category": "Searching",
+          "commands": [
+            {
+              "command": "fc",
+              "description": "Move right to the next occurance of c"
+            },
+            {
+              "command": "Fc",
+              "description": "Move left to the previous occurance of c"
+            },
+            {
+              "command": "tc",
+              "description": "Move right to the next occurance of c, then one char backward"
+            },
+            {
+              "command": "Tc",
+              "description": "Move left to the previous occurance of c, then one char forward"
+            },
+            {
+              "command": ";",
+              "description": "Redo the last character finding command"
+            },
+            {
+              "command": ",",
+              "description": "Redo the last character finding command in opposite direction"
+            },
+            {
+              "command": "|",
+              "description": "Move to the n-th column (you may specify the argument n by typing it on number keys, for example, 20|)"
+            }
+          ]
+        },
+        {
+          "category": "Deleting",
+          "commands": [
+            {
+              "command": "x",
+              "description": "Delete a single character under the cursor"
+            },
+            {
+              "command": "X",
+              "description": "Delete a character before the cursor"
+            },
+            {
+              "command": "d<movement command>",
+              "description": "Delete text of a movement command"
+            },
+            {
+              "command": "D or d$",
+              "description": "Delete to the end of the line"
+            },
+            {
+              "command": "dd or 0d$",
+              "description": "Delete current line"
+            },
+            {
+              "command": "Ctrl-w",
+              "description": "Delete the previous word"
+            },
+            {
+              "command": "Ctrl-u",
+              "description": "Delete from the cursor to the beginning of line"
+            }
+          ]
+        },
+        {
+          "category": "Undo/Redo",
+          "commands": [
+            {
+              "command": "u",
+              "description": "Undo previous text modification"
+            },
+            {
+              "command": "U",
+              "description": "Undo all previous text modifications on the line"
+            },
+            {
+              "command": ".",
+              "description": "Redo the last text modification"
+            }
+          ]
+        },
+        {
+          "category": "Yanking and Pasting",
+          "commands": [
+            {
+              "command": "y<movement command>",
+              "description": "Yank a movement into buffer)"
+            },
+            {
+              "command": "yy",
+              "description": "Yank the whole line"
+            },
+            {
+              "command": "p",
+              "description": "Insert the yanked text at the cursor)"
+            },
+            {
+              "command": "P",
+              "description": "Insert the yanked text before the cursor"
+            }
+          ]
+        },
+        {
+          "category": "History",
+          "commands": [
+            {
+              "command": "k",
+              "description": "Move backward one command in history"
+            },
+            {
+              "command": "j",
+              "description": "Move forward one command in history"
+            },
+            {
+              "command": "G",
+              "description": "Move to the history line n (you may specify the argument n by typing it on number keys, for example, 15G)"
+            },
+            {
+              "command": "/string or Ctrl-r",
+              "description": "Search history backward for a command matching string"
+            },
+            {
+              "command": "?string or Ctrl-s",
+              "description": "Search history forward for a command matching string (remember that on most machines Ctrl-s stops the output to the terminal (Ctrl-q starts output) and you"
+            },
+            {
+              "command": "n",
+              "description": "Repeat search in the same direction as previous"
+            },
+            {
+              "command": "N",
+              "description": "Repeat search in the opposite direction as previous"
+            }
+          ]
+        },
+        {
+          "category": "Completing",
+          "commands": [
+            {
+              "command": "TAB or Ctrl-i or =",
+              "description": "List possible completions"
+            },
+            {
+              "command": "*",
+              "description": "Insert all possible completions"
+            }
+          ]
+        },
+        {
+          "category": "Miscellaneous",
+          "commands": [
+            {
+              "command": "∼",
+              "description": "Invert the case of the character under cursor, and move a character right"
+            },
+            {
+              "command": "#",
+              "description": "Prepend # (comment character) to the line and send it to the history list"
+            },
+            {
+              "command": "_",
+              "description": "Inserts the n-th word of the previous command in the current line"
+            },
+            {
+              "command": "0, 1, 2, ...",
+              "description": "Sets the numeric argument"
+            },
+            {
+              "command": "Ctrl-v",
+              "description": "Insert a character literally (quoted insert)"
+            },
+            {
+              "command": "Ctrl-t",
+              "description": "Transpose (exchange) two characters"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "Emacs",
+      "categories": [
+        {
+          "category": "Moving",
+          "commands": [
+            {
+              "command": "Ctrl-a",
+              "description": "Move to the start of the current line"
+            },
+            {
+              "command": "Ctrl-e",
+              "description": "Move to the end of the line"
+            },
+            {
+              "command": "Ctrl-f",
+              "description": "Move forward a character"
+            },
+            {
+              "command": "Ctrl-b",
+              "description": "Move back a character"
+            },
+            {
+              "command": "Alt-f",
+              "description": "Move forward to the end of the next word Words are alphanumeric"
+            },
+            {
+              "command": "Alt-b",
+              "description": "Move back to the start of the current/previous word Words are alphanumeric"
+            },
+            {
+              "command": "Ctrl-l",
+              "description": "Clear the screen"
+            }
+          ]
+        },
+        {
+          "category": "History",
+          "commands": [
+            {
+              "command": "Ctrl-p",
+              "description": "Fetch the previous command from the history list"
+            },
+            {
+              "command": "Ctrl-n",
+              "description": "Fetch the next command from the history list"
+            },
+            {
+              "command": "Alt-<",
+              "description": "Move to the first line in the history"
+            },
+            {
+              "command": "Alt->",
+              "description": "Move to the last line in the history"
+            },
+            {
+              "command": "Ctrl-r",
+              "description": "Search backward through history"
+            },
+            {
+              "command": "Ctrl-s",
+              "description": "Search forward through history"
+            },
+            {
+              "command": "Alt-p",
+              "description": "Search backward through history for a given string"
+            },
+            {
+              "command": "Alt-n",
+              "description": "Search forward through history for a given string"
+            },
+            {
+              "command": "Ctrl-Alt-y",
+              "description": "Insert the first argument to the previous command With an argument n, insert the nth word from the previous command"
+            },
+            {
+              "command": "Alt-. or Alt-_",
+              "description": "Insert the last argument to the previous command With an argument n, insert the nth word from the previous command"
+            }
+          ]
+        },
+        {
+          "category": "Changing Text",
+          "commands": [
+            {
+              "command": "Ctrl-d",
+              "description": "Delete the character under the cursor"
+            },
+            {
+              "command": "Delete",
+              "description": "Delete the character before the cursor"
+            },
+            {
+              "command": "Ctrl-v/Ctrl-q",
+              "description": "Add the next character you type verbatim"
+            },
+            {
+              "command": "Ctrl-t",
+              "description": "Transpose characters"
+            },
+            {
+              "command": "Alt-t",
+              "description": "Transpose words"
+            },
+            {
+              "command": "Alt-u",
+              "description": "Uppercase the current word"
+            },
+            {
+              "command": "Alt-l",
+              "description": "Lowercase the current word"
+            },
+            {
+              "command": "Alt-c",
+              "description": "Capitalize the current word"
+            }
+          ]
+        },
+        {
+          "category": "Killing and Yanking",
+          "commands": [
+            {
+              "command": "Ctrl-k",
+              "description": "Kill (cut) forwards to the end of the line"
+            },
+            {
+              "command": "Ctrl-u or Ctrl-x/Delete",
+              "description": "Kill (cut) backwards to the start of the line"
+            },
+            {
+              "command": "Alt-d",
+              "description": "Kill (cut) forwards to the end of the current word"
+            },
+            {
+              "command": "Alt-Delete or Ctrl-w",
+              "description": "Kill (cut) backwards to the start of the current word"
+            },
+            {
+              "command": "Alt-\\",
+              "description": "Delete whitespace around the cursor"
+            },
+            {
+              "command": "Ctrl-y",
+              "description": "Yank (paste) the top of the kill ring"
+            },
+            {
+              "command": "Alt-y",
+              "description": "Rotate the kill ring, and yank (paste) the new top. Only works after a yank."
+            }
+          ]
+        },
+        {
+          "category": "Completing",
+          "commands": [
+            {
+              "command": "Tab",
+              "description": "Autocomplete"
+            },
+            {
+              "command": "Alt-?",
+              "description": "List possible completions"
+            },
+            {
+              "command": "Alt-*",
+              "description": "Insert possible completions"
+            }
+          ]
+        },
+        {
+          "category": "Macros",
+          "commands": [
+            {
+              "command": "Ctrl-x (",
+              "description": "Begin saving the characters typed as a macro"
+            },
+            {
+              "command": "Ctrl-x )",
+              "description": "Stop saving the characters typed as a macro"
+            },
+            {
+              "command": "Ctrl-x e",
+              "description": "Execute the most recent macro"
+            }
+          ]
+        },
+        {
+          "category": "Miscellaneous",
+          "commands": [
+            {
+              "command": "Ctrl-x or Ctrl-r",
+              "description": "Read in the contents of the inputrc file"
+            },
+            {
+              "command": "Ctrl-g",
+              "description": "Abort current editing command"
+            },
+            {
+              "command": "Ctrl-_ or Ctrl-x or Ctrl-u",
+              "description": "Incremental undo, separately remembered for each line"
+            },
+            {
+              "command": "Alt-r",
+              "description": "Undo all changes made to this line. This is like executing the undo command enough times to return the line to its initial state"
+            },
+            {
+              "command": "Alt-Space or Ctrl-@",
+              "description": "Set the mark (save this location)"
+            },
+            {
+              "command": "Ctrl-x or Ctrl-x",
+              "description": "Set the mark and jump to the previous mark"
+            },
+            {
+              "command": "Ctrl-]",
+              "description": "Search forwards for a single character in the current line and jump to that location"
+            },
+            {
+              "command": "Ctrl-Alt-]",
+              "description": "Search backwards for a single character in the current line and jump to that location"
+            },
+            {
+              "command": "Alt-#",
+              "description": "Comment the current line and start a new one"
+            },
+            {
+              "command": "Ctrl-e",
+              "description": "Enter Emacs editing mode"
+            },
+            {
+              "command": "Ctrl-Alt-j",
+              "description": "Enter Vi editing mode"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

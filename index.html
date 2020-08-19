@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/superhero/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LS4/wo5Z/8SLpOLHs0IbuPAGOWTx30XSoZJ8o7WKH0UJhRpjXXTpODOjfVnNjeHu"
+      crossorigin="anonymous"
+    />
+    <title>GNU Readline Library Reference</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3" id="top">
+      <a class="navbar-brand" href="#">GNU Readline Guide</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarColor02"
+        aria-controls="navbarColor02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="https://github.com/rsapkf/gnureadline-reference/"
+              target="_blank"
+              >GitHub</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="https://tiswww.case.edu/php/chet/readline/rltop.html"
+              target="_blank"
+              >Official Docs</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="https://en.wikipedia.org/wiki/GNU_Readline"
+              target="_blank"
+              >What's this?</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="jumbotron">
+        <h3 class="display-4 font-weight-bold">GNU Readline Library</h3>
+        <h3 class="display-6">Reference Sheet</h3>
+        <hr class="my-4" />
+        <span class="lead">
+          <a class="btn btn-primary btn-sm" href="#Vi" role="button">VI Mode</a>
+        </span>
+        <span class="lead">
+          <a class="btn btn-primary btn-sm" href="#Emacs" role="button"
+            >Emacs Mode</a
+          >
+        </span>
+      </div>
+    </div>
+    <div class="container">
+      <div id="tables"></div>
+    </div>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top container">
+      <div class="row">
+        <div class="col-12 col-md">
+          <small class="d-block mb-3 text-muted"
+            >&copy;
+            <span id="copyright"></span>
+            rsapkf
+          </small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li>
+              <a
+                class="text-muted"
+                href="https://github.com/rsapkf/gnureadline-reference/"
+                target="_blank"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-muted"
+                href="https://tiswww.case.edu/php/chet/readline/rltop.html"
+                target="_blank"
+                >Official Docs</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-muted"
+                href="https://en.wikipedia.org/wiki/GNU_Readline"
+                target="_blank"
+                >What's this?</a
+              >
+            </li>
+            <li>
+              <a class="text-muted" href="/humans.txt" target="_blank"
+                >humans.txt</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>License</h5>
+          <ul class="list-unstyled text-small">
+            <span class="badge badge-success">MIT</span>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      const copyright = document.getElementById('copyright');
+      copyright.innerHTML = new Date().getFullYear();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js"></script>
+    <script src="tables.precompiled.js"></script>
+    <script>
+      async function init() {
+        const res = await fetch('data.json');
+        const json = await res.json();
+
+        // Handlebars
+        const template = Handlebars.templates.tables;
+        document.getElementById('tables').innerHTML = template(json);
+      }
+
+      init();
+    </script>
+  </body>
+</html>

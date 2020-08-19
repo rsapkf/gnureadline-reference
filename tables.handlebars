@@ -1,0 +1,33 @@
+{{#each modes}}
+<div id="{{mode}}">
+  <button type="button" class="btn btn-primary btn-lg btn-block">
+    {{ mode }} Mode Shortcuts
+  </button>
+  {{#each categories}}
+  <div class="row">
+    <div class="col-sm">
+      <table class="table table-hover mr-auto">
+        <thead>
+          <tr>
+            <th scope="col">
+              <h3>{{ category }}</h3>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        {{#each commands}}
+        <tbody>
+          <tr class="table-dark">
+            <th scope="row">{{ command }}</th>
+            <td>{{ description }}.</td>
+          </tr>
+        </tbody>
+        {{/each}}
+      </table>
+    </div>
+  </div>
+  {{/each}}
+  <a class="text-muted" href="#top"><button type="button" class="btn btn-outline-primary">Top</button></a>
+</div>
+<br />
+{{/each}}
