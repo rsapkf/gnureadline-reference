@@ -9,7 +9,7 @@ templates['tables'] = template({"1":function(container,depth0,helpers,partials,d
     };
 
   return "<div id=\""
-    + alias4(((helper = (helper = lookupProperty(helpers,"mode") || (depth0 != null ? lookupProperty(depth0,"mode") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"mode","hash":{},"data":data,"loc":{"start":{"line":2,"column":9},"end":{"line":2,"column":17}}}) : helper)))
+    + alias4(((helper = (helper = lookupProperty(helpers,"mode") || (depth0 != null ? lookupProperty(depth0,"mode") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"mode","hash":{},"data":data,"loc":{"start":{"line":2,"column":9},"end":{"line":2,"column":19}}}) : helper)))
     + "\">\n  <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\">\n    "
     + alias4(((helper = (helper = lookupProperty(helpers,"mode") || (depth0 != null ? lookupProperty(depth0,"mode") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"mode","hash":{},"data":data,"loc":{"start":{"line":4,"column":4},"end":{"line":4,"column":14}}}) : helper)))
     + " Mode Shortcuts\n  </button>\n"
