@@ -15,51 +15,8 @@
     <title>GNU Readline Library Reference</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3" id="top">
-      <a class="navbar-brand" href="#">GNU Readline Guide</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarColor02"
-        aria-controls="navbarColor02"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarColor02">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="https://github.com/rsapkf/gnureadline-reference/"
-              target="_blank"
-              >GitHub</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="https://tiswww.case.edu/php/chet/readline/rltop.html"
-              target="_blank"
-              >Official Docs</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="https://en.wikipedia.org/wiki/GNU_Readline"
-              target="_blank"
-              >What's this?</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="container">
+    <!-- JUMBOTRON -->
+    <div class="container mt-4">
       <div class="jumbotron">
         <h3 class="display-4 font-weight-bold">GNU Readline Library</h3>
         <h3 class="display-6">Reference Sheet</h3>
@@ -72,85 +29,60 @@
             >Emacs Mode</a
           >
         </span>
+        <br />
+        <br />
+        <span class="lead">
+          <a
+            class="btn btn-outline-success btn-sm"
+            href="https://github.com/rsapkf/gnureadline-reference"
+            role="button"
+            >GitHub</a
+          >
+        </span>
+        <span class="lead">
+          <a
+            class="btn btn-outline-success btn-sm"
+            href="https://tiswww.case.edu/php/chet/readline/rltop.html"
+            role="button"
+            >Official Docs</a
+          >
+        </span>
+        <span class="lead">
+          <a
+            class="btn btn-outline-success btn-sm"
+            href="https://en.wikipedia.org/wiki/GNU_Readline"
+            role="button"
+            >What's this?</a
+          >
+        </span>
       </div>
     </div>
+
+    <!-- TABLES -->
     <div class="container">
       <div id="tables"></div>
     </div>
 
-    <footer class="pt-4 my-md-5 pt-md-5 border-top container">
+    <!-- FOOTER -->
+    <footer class="my-5 container">
       <div class="row">
         <div class="col-12 col-md">
           <small class="d-block mb-3 text-muted"
             >&copy;
             <span id="copyright"></span>
-            rsapkf
+            <br />
+            Made with ♥ by
+            <a href="https://github.com/rsapkf/">@rsapkf</a>
           </small>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Resources</h5>
-          <ul class="list-unstyled text-small">
-            <li>
-              <a
-                class="text-muted"
-                href="https://github.com/rsapkf/gnureadline-reference/"
-                target="_blank"
-                >GitHub</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-muted"
-                href="https://tiswww.case.edu/php/chet/readline/rltop.html"
-                target="_blank"
-                >Official Docs</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-muted"
-                href="https://en.wikipedia.org/wiki/GNU_Readline"
-                target="_blank"
-                >What's this?</a
-              >
-            </li>
-            <li>
-              <a class="text-muted" href="/humans.txt" target="_blank"
-                >humans.txt</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>License</h5>
-          <ul class="list-unstyled text-small">
-            <span class="badge badge-success">MIT</span>
-          </ul>
         </div>
       </div>
     </footer>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
     <script type="text/javascript">
       const copyright = document.getElementById('copyright');
       copyright.innerHTML = new Date().getFullYear();
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js"></script>
     <script src="tables.precompiled.js"></script>
     <script>

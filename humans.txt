@@ -1,0 +1,11 @@
+/* Created by */
+    github.com/rsapkf
+
+/* Tech Stack */
+    Languages: HTML5, CSS3, JavaScript
+    Frameworks: Bootstrap, Bootswatch, Handlebars
+    Tools: Neovim, VSCode, rxvt-unicode, Firefox, GitHub Pages
+
+/* Sources */
+    http://readline.kablamo.org/emacs.html
+    https://catonmat.net/ftp/bash-vi-editing-mode-cheat-sheet.pdf
